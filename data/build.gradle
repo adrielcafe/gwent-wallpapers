@@ -1,0 +1,10 @@
+apply from: '../kotlin-module.gradle'
+
+dependencies {
+    implementation project(':shared')
+    implementation project(':domain')
+
+    implementation ModuleLib.SATCHEL
+    implementation ModuleLib.SATCHEL_GZIP
+    implementation ModuleLib.KOIN
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/authorImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@id/border"
+        android:layout_alignBottom="@id/border"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/img_author"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/border"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/img_author_border_default"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/border"
+        android:gravity="center"
+        android:text="@string/about_author_headline"
+        android:textColor="?colorOnSurface"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        app:fontFamily="@font/gwent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/authorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:layout_below="@id/headline"
+        android:gravity="center"
+        android:text="@string/about_author_name"
+        android:textColor="?colorPrimary"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+        app:fontFamily="@font/gwent"/>
+</RelativeLayout>

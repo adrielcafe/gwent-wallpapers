@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_set_wallpaper_location_home_screen"
+            android:title="@string/dialog_set_wallpaper_location_home_screen"
+            android:icon="@drawable/ic_home_screen"/>
+
+        <item
+            android:id="@+id/action_set_wallpaper_location_lock_screen"
+            android:title="@string/dialog_set_wallpaper_location_lock_screen"
+            android:icon="@drawable/ic_lock_screen"/>
+
+        <item
+            android:id="@+id/action_set_wallpaper_location_both_screens"
+            android:title="@string/dialog_set_wallpaper_location_both_screens"
+            android:icon="@drawable/ic_screen"/>
+    </group>
+
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="defaultColorPrimary">#009C6D</color>
+    <color name="defaultColorPrimaryDark">#00885F</color>
+
+    <color name="factionNeutralColorPrimary">#6B523D</color>
+    <color name="factionNeutralColorPrimaryDark">#4E3E2B</color>
+
+    <color name="factionMonstersColorPrimary">#811510</color>
+    <color name="factionMonstersColorPrimaryDark">#611711</color>
+
+    <color name="factionNilfgaardColorPrimary">#373A3f</color>
+    <color name="factionNilfgaardColorPrimaryDark">#2C3434</color>
+
+    <color name="factionNorthernRealmsColorPrimary">#325577</color>
+    <color name="factionNorthernRealmsColorPrimaryDark">#1F4368</color>
+
+    <color name="factionScoiataelColorPrimary">#485E30</color>
+    <color name="factionScoiataelColorPrimaryDark">#374727</color>
+
+    <color name="factionSkelligeColorPrimary">#564D71</color>
+    <color name="factionSkelligeColorPrimaryDark">#392E52</color>
+
+    <color name="factionSyndicateColorPrimary">#AE5E28</color>
+    <color name="factionSyndicateColorPrimaryDark">#944418</color>
+
+    <color name="background">#E0E0E0</color>
+    <color name="error">#D32F2F</color>
+    <color name="info">#607D8B</color>
+    <color name="navHeaderTitleText">#1B160A</color>
+    <color name="navHeaderTitleShadow">#FFEE76</color>
+</resources>

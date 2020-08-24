@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "662728733313",
+    "firebase_url": "https://gwent-wallpapers.firebaseio.com",
+    "project_id": "gwent-wallpapers",
+    "storage_bucket": "gwent-wallpapers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662728733313:android:cb0cdf16d3f589cbe21380",
+        "android_client_info": {
+          "package_name": "cafe.adriel.gwentwallpapers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662728733313-scj3lagc0p95bcj88grp7apjtt38mdii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYwQg__PjBCMElMuYOOh6LC19_oOAoeM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662728733313-scj3lagc0p95bcj88grp7apjtt38mdii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662728733313:android:23baa4a7d2b95defe21380",
+        "android_client_info": {
+          "package_name": "cafe.adriel.gwentwallpapers.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662728733313-scj3lagc0p95bcj88grp7apjtt38mdii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYwQg__PjBCMElMuYOOh6LC19_oOAoeM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662728733313-scj3lagc0p95bcj88grp7apjtt38mdii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

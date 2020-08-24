@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply from: '../android-module.gradle'
+
+android {
+    defaultConfig {
+        applicationId Config.APP_ID
+
+        versionCode Config.VERSION_CODE
+        versionName Config.VERSION_NAME
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            applicationIdSuffix '.dev'
+            versionNameSuffix '-dev'
+            buildConfigField 'Boolean', 'RELEASE', 'false'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'Boolean', 'RELEASE', 'true'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':shared')
+    implementation project(':domain')
+    implementation project(':data')
+    implementation project(':presentation')
+
+    implementation ModuleLib.KOIN_ANDROID
+    implementation ModuleLib.DRESS_CODE
+
+    debugImplementation ModuleLib.LEAK_CANARY
+
+    releaseImplementation ModuleLib.ANALYTICS
+    releaseImplementation ModuleLib.CRASHLYTICS
+    releaseImplementation ModuleLib.PLUMBER
+}

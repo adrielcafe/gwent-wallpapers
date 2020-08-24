@@ -1,0 +1,111 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">?colorPrimary</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimation</item>
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="fontFamily">@font/ubuntu</item>
+    </style>
+
+    <style name="AppTheme.Default">
+        <item name="colorPrimary">@color/defaultColorPrimary</item>
+        <item name="colorPrimaryDark">@color/defaultColorPrimaryDark</item>
+        <item name="colorAccent">@color/defaultColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionNeutral">
+        <item name="colorPrimary">@color/factionNeutralColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionNeutralColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionNeutralColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionMonsters">
+        <item name="colorPrimary">@color/factionMonstersColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionMonstersColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionMonstersColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionNilfgaard">
+        <item name="colorPrimary">@color/factionNilfgaardColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionNilfgaardColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionNilfgaardColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionNorthernRealms">
+        <item name="colorPrimary">@color/factionNorthernRealmsColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionNorthernRealmsColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionNorthernRealmsColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionScoiatael">
+        <item name="colorPrimary">@color/factionScoiataelColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionScoiataelColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionScoiataelColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionSkellige">
+        <item name="colorPrimary">@color/factionSkelligeColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionSkelligeColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionSkelligeColorPrimary</item>
+    </style>
+
+    <style name="AppTheme.FactionSyndicate">
+        <item name="colorPrimary">@color/factionSyndicateColorPrimary</item>
+        <item name="colorPrimaryDark">@color/factionSyndicateColorPrimaryDark</item>
+        <item name="colorAccent">@color/factionSyndicateColorPrimary</item>
+    </style>
+
+    <style name="WindowAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="CurrentWallpaperInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowDx">3</item>
+        <item name="android:shadowDy">3</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="AdapterText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+    </style>
+
+    <style name="ChipBadgeText">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="fontFamily">monospace</item>
+    </style>
+
+    <style name="ChipSelectionText">
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/ubuntu</item>
+    </style>
+
+    <style name="SectionHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5</item>
+        <item name="fontFamily">@font/gwent</item>
+    </style>
+
+    <style name="SectionList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">?actionBarSize</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="layoutManager">androidx.recyclerview.widget.LinearLayoutManager</item>
+    </style>
+</resources>

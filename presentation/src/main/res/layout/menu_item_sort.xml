@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/icon"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:background="?actionBarItemBackground"
+        android:tint="?colorSurface"
+        android:src="@drawable/ic_sort"/>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/badge"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="6dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:checkable="false"
+        app:ensureMinTouchTargetSize="false"
+        app:chipIconSize="10dp"
+        app:chipIconTint="?colorOnSurface"
+        app:chipStartPadding="4dp"
+        app:chipEndPadding="0dp"
+        tools:chipIcon="@drawable/ic_sort_random"/>
+
+</merge>

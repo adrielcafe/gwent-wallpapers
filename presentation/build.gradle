@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply from: '../android-module.gradle'
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':shared')
+
+    implementation ModuleLib.HAL
+    implementation ModuleLib.BROKER
+    implementation ModuleLib.BROKER_LIFECYCLE
+    implementation ModuleLib.KOIN_ANDROID_SCOPE
+    implementation ModuleLib.KOIN_ANDROID_VIEWMODEL
+
+    ModuleLib.android.forEach { implementation it }
+    ModuleLib.ui.forEach { implementation it }
+}

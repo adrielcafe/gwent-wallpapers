@@ -1,0 +1,45 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion Config.COMPILE_SDK_VERSION
+    defaultConfig {
+        minSdkVersion Config.MIN_SDK_VERSION
+        targetSdkVersion Config.TARGET_SDK_VERSION
+
+        resConfigs 'en'
+    }
+    buildFeatures {
+        viewBinding {
+            enabled true
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin/'
+        debug.java.srcDirs += 'src/debug/kotlin/'
+        release.java.srcDirs += 'src/release/kotlin/'
+        test.java.srcDirs += 'src/test/kotlin/'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin/'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]
+    }
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
+}
+
+dependencies {
+    ModuleLib.kotlin.forEach { implementation it }
+
+    TestLib.unitTest.forEach { testImplementation it }
+}

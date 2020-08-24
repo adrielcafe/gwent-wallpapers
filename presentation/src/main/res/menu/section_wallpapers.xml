@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Shrinked state -->
+    <item
+        android:id="@+id/action_filter"
+        android:title="@string/menu_filter"
+        android:icon="@drawable/ic_filter"
+        app:showAsAction="always"
+        app:actionViewClass="cafe.adriel.gwentwallpapers.presentation.internal.ui.view.FilterMenuItemView"/>
+
+    <item
+        android:id="@+id/action_sort"
+        android:title="@string/menu_sort"
+        android:icon="@drawable/ic_sort"
+        app:showAsAction="always"
+        app:actionViewClass="cafe.adriel.gwentwallpapers.presentation.internal.ui.view.SortMenuItemView"/>
+
+    <!-- Expanded state -->
+    <item
+        android:id="@+id/action_favorite"
+        android:title="@string/menu_favorite"
+        android:icon="@drawable/ic_favorite_off"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_set_as"
+        android:title="@string/menu_set_as"
+        android:icon="@drawable/ic_set_as"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_share_wallpaper"
+        android:title="@string/menu_share"
+        android:icon="@drawable/ic_share"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_download"
+        android:title="@string/menu_download"
+        android:icon="@drawable/ic_download"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_copy_url"
+        android:title="@string/menu_copy_url"
+        android:icon="@drawable/ic_url"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+</menu>

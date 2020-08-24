@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Gwent Wallpapers</string>
+
+    <string name="screen_wallpapers">Wallpapers</string>
+    <string name="screen_settings">Settings</string>
+    <string name="screen_about">About</string>
+
+    <string name="menu_filter">Filter</string>
+    <string name="menu_sort">Sort</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_download">Download</string>
+    <string name="menu_set_as">Set as…</string>
+    <string name="menu_copy_url">Copy URL</string>
+    <string name="menu_rate_review">Rate &amp; review</string>
+
+    <string name="state_loading">Searching for wallpapers…</string>
+    <string name="state_empty">Nothing found</string>
+
+    <string name="wallpaper_author">by %s</string>
+
+    <string name="dialog_sort_title">Sort by</string>
+    <string name="dialog_sort_random">Random</string>
+    <string name="dialog_sort_name">Name</string>
+
+    <string name="dialog_filter_title">Filter by</string>
+    <string name="dialog_filter_clear">Clear</string>
+    <string name="dialog_filter_apply">Apply</string>
+    <string name="dialog_filter_name">Name</string>
+    <string name="dialog_filter_name_hint">e.g. Ciri</string>
+    <string name="dialog_filter_favorite">Favorite</string>
+    <string name="dialog_filter_side">Side</string>
+    <string name="dialog_filter_faction">Faction</string>
+    <string name="dialog_filter_set">Set</string>
+    <string name="dialog_filter_type">Type</string>
+    <string name="dialog_filter_rarity">Rarity</string>
+    <string name="dialog_filter_color">Color</string>
+
+    <string name="dialog_set_wallpaper_location_title">Set wallpaper on</string>
+    <string name="dialog_set_wallpaper_location_home_screen">Home screen</string>
+    <string name="dialog_set_wallpaper_location_lock_screen">Lock screen</string>
+    <string name="dialog_set_wallpaper_location_both_screens">Both</string>
+
+    <string name="settings_theme_title">Theme</string>
+    <string name="settings_theme_subtitle">What\'s your favorite faction?</string>
+    <string name="settings_auto_wallpaper_title">Auto Wallpaper</string>
+    <string name="settings_auto_wallpaper_subtitle">So many cards to choose from!</string>
+    <string name="settings_enabled">Enabled</string>
+    <string name="settings_show_notification">Show notification</string>
+    <string name="settings_only_favorites">Only favorites</string>
+    <string name="settings_screen">Change on</string>
+    <string name="settings_frequency">At every</string>
+
+    <string name="about_share_app">Gwent Wallpapers for Android: %s</string>
+    <string name="about_author_headline">Made with ♥ by</string>
+    <string name="about_author_name">Adriel Café</string>
+    <string name="about_intro_message_1">Hi there! Are you enjoying the app? I hope so.</string>
+    <string name="about_intro_message_2">So you loved the artworks but never played GWENT: The Witcher Card Game before? Register for free through the link below and earn cool rewards!</string>
+    <string name="about_intro_message_3">If you have any question, suggestion or want to report a bug please contact me through the channels below.</string>
+    <string name="about_email_subject">%s | v%s, SDK %d</string>
+    <string name="about_open_source">Open Source</string>
+    <string name="about_open_source_message">Gwent Wallpapers is distributed under the MIT License. Contributions are very welcome!</string>
+    <string name="about_legal">Legal Notice</string>
+    <string name="about_legal_message_1">Gwent Wallpapers is an unofficial fan work under the Gwent Fan Content Guidelines.</string>
+    <string name="about_legal_message_2">It incorporates artworks which are copyrighted and belong to CD PROJEKT S.A. (AKA CD PROJEKT RED). All artworks are for personal use only.</string>
+    <string name="about_legal_copyright">CD PROJEKT®, The Witcher®, GWENT® are registered trademarks of CD PROJEKT Capital Group. GWENT game © CD PROJEKT S.A. All rights reserved. Developed by CD PROJEKT S.A. The GWENT game is set in the universe created by Andrzej Sapkowski in his series of books. All other copyrights and trademarks are the property of their respective owners.</string>
+
+    <string name="message_wallpaper_saved">The wallpaper has been saved to your gallery</string>
+    <string name="message_url_copied_clipboard">Wallpaper URL copied to Clipboard</string>
+    <string name="message_wallpaper_set">Wallpaper set!</string>
+    <string name="message_generic_error">Oops! Something went wrong</string>
+    <string name="message_new_wallpaper_set">A new Gwent Wallpaper has been set</string>
+    <string name="message_no_favorite_found">No favorite card found to set as wallpaper</string>
+    <string name="message_missing_write_permission">Oops! Missing permission to save files</string>
+    <string name="message_connect_to_internet">Connect to the internet</string>
+    <string name="message_verify_connection">Verify your internet connection</string>
+    <string name="message_error_download_image">Unable to download high quality image</string>
+    <string name="message_tap_to_open">Tap to open</string>
+    <string name="message_tap_to_open_settings">Tap to open the settings</string>
+
+</resources>

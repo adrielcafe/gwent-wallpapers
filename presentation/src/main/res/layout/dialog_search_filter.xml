@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@id/closeFilter"
+        android:text="@string/dialog_filter_title"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/closeFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:layout_alignParentEnd="true"
+        android:background="?actionBarItemBackground"
+        android:src="@drawable/ic_close"
+        android:tint="?colorPrimary"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/filterNameTitle"
+        android:layout_below="@id/dialogTitle"
+        android:text="@string/dialog_filter_name"
+        style="@style/AdapterText"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filterNameHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/filterNameTitle"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeWidth="0dp"
+        app:boxCornerRadiusTopStart="0dp"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxCornerRadiusBottomStart="0dp"
+        app:boxCornerRadiusBottomEnd="0dp"
+        app:hintEnabled="false"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textShortMessage"
+            android:imeOptions="actionDone"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:hint="@string/dialog_filter_name_hint"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filterList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterNameHolder"
+        android:layout_above="@id/bottomSeparator"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/adapter_selection"/>
+
+    <include
+        android:id="@+id/bottomSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_above="@id/actionsHolder"
+        layout="@layout/view_separator"/>
+
+    <LinearLayout
+        android:id="@+id/actionsHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clearFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/dialog_filter_clear"
+            app:strokeColor="?colorPrimary"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/applyFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/dialog_filter_apply"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

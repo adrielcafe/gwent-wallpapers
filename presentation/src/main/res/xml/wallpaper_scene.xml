@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@+id/end"
+        app:duration="300">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                app:motionTarget="@id/currentWallpaper"
+                app:framePosition="0"
+                android:alpha="0"/>
+
+            <KeyAttribute
+                app:motionTarget="@id/currentWallpaper"
+                app:framePosition="1"
+                android:alpha="1"/>
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet
+        android:id="@+id/start"
+        app:transitionEasing="decelerate">
+
+        <Constraint android:id="@id/currentWallpaper">
+
+            <PropertySet android:visibility="invisible"/>
+
+        </Constraint>
+
+        <Constraint android:id="@id/wallpaperInfo">
+
+            <PropertySet android:visibility="invisible"/>
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/end"
+        app:transitionEasing="accelerate">
+
+        <Constraint
+            android:id="@id/currentWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <PropertySet android:visibility="visible"/>
+
+        </Constraint>
+
+        <Constraint android:id="@id/wallpaperInfo">
+
+            <PropertySet android:visibility="visible"/>
+
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

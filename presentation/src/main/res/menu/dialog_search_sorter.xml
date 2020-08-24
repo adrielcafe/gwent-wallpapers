@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_sort_random"
+            android:title="@string/dialog_sort_random"
+            android:icon="@drawable/ic_sort_random"/>
+
+        <item
+            android:id="@+id/action_sort_name_asc"
+            android:title="@string/dialog_sort_name"
+            android:icon="@drawable/ic_sort_asc"/>
+
+        <item
+            android:id="@+id/action_sort_name_desc"
+            android:title="@string/dialog_sort_name"
+            android:icon="@drawable/ic_sort_desc"/>
+    </group>
+
+</menu>

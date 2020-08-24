@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/sectionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/wallpapersSection"
+            layout="@layout/section_wallpapers"/>
+
+        <include
+            android:id="@+id/settingsSection"
+            layout="@layout/section_settings"/>
+
+        <include
+            android:id="@+id/aboutSection"
+            layout="@layout/section_about"/>
+
+    </ViewFlipper>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/setWallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_set_wallpaper"
+        android:visibility="invisible"
+        app:layout_anchor="@id/navigation"
+        app:backgroundTint="?colorSurface"
+        app:tint="?colorPrimary"
+        app:rippleColor="?colorPrimaryDark"/>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:theme="@style/ThemeOverlay.MaterialComponents.BottomAppBar.Primary"
+        app:navigationIcon="@drawable/ic_menu"
+        app:menu="@menu/section_wallpapers"
+        app:fabAlignmentMode="end"
+        app:fabCradleMargin="8dp"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
