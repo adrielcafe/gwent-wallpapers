@@ -23,15 +23,15 @@ Unofficial Android app with more than 1.000 cards from [GWENT: The Witcher Card 
 * [adrielcafe/satchel](https://github.com/adrielcafe/satchel): 🎒 A fast, secure and modular key-value storage with batteries-included for Android and JVM
 * [adrielcafe/broker](https://github.com/adrielcafe/broker): 💬 Publish-Subscribe (a.k.a Pub/Sub, EventBus) library for Android and JVM
 
-### Screenshots
-![Screenshots](https://github.com/adrielcafe/gwent-wallpapers/blob/master/art/screenshots.png)
-
 ### Experiments
 I decided to try some new things in this project, it was a lot of fun and I learned a lot! Let me share with you:
 1. [Functional Interactors](https://github.com/adrielcafe/gwent-wallpapers/wiki/Experiment-%231:-Functional-Interactors)
 2. [Single Activity with standalone UI components](https://github.com/adrielcafe/gwent-wallpapers/wiki/Experiment-%232:-Single-Activity-with-standalone-UI-components)
 3. [Adapter DSL with reusable UI components](https://github.com/adrielcafe/gwent-wallpapers/wiki/Experiment-%233:-Adapter-DSL-with-reusable-UI-components)
 4. [Expanding an image with MotionLayout](https://github.com/adrielcafe/gwent-wallpapers/wiki/Experiment-%234:-Expanding-an-image-with-MotionLayout)
+
+### Screenshots
+![Screenshots](https://github.com/adrielcafe/gwent-wallpapers/blob/master/art/screenshots.png)
 
 ## Disclaimer
 Gwent Wallpapers is an unofficial fan work under the Gwent [Fan Content Guidelines](https://playgwent.com/en/fan-content). It incorporates artworks which are copyrighted and belong to [CD PROJEKT S.A.](https://regulations.cdprojektred.com/en/user_agreement) (AKA CD PROJEKT RED). All artworks are for personal use only.
