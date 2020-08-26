@@ -1,6 +1,6 @@
 [![Android API](https://img.shields.io/badge/api-21%2B-brightgreen.svg?style=for-the-badge)](https://android-arsenal.com/api?level=21) 
 [![Github Actions](https://img.shields.io/github/workflow/status/adrielcafe/gwent-wallpapers/main/master?style=for-the-badge)](https://github.com/adrielcafe/gwent-wallpapers/actions) 
-[![Codacy](https://img.shields.io/codacy/grade/a982fb195ea24f148eb266a4df174eeb.svg?style=for-the-badge)](https://www.codacy.com/app/adriel_cafe/gwent-wallpapers) 
+[![Codacy](https://img.shields.io/codacy/grade/e99092995b9c468d9a4e4b077d464a06.svg?style=for-the-badge)](https://www.codacy.com/app/adriel_cafe/gwent-wallpapers) 
 [![Kotlin](https://img.shields.io/github/languages/top/adrielcafe/gwent-wallpapers.svg?style=for-the-badge)](https://kotlinlang.org/) 
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg?style=for-the-badge)](https://ktlint.github.io/) 
 [![License MIT](https://img.shields.io/github/license/adrielcafe/gwent-wallpapers.svg?style=for-the-badge&color=yellow)](https://opensource.org/licenses/MIT)
