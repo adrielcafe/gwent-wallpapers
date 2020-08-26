@@ -1,7 +1,7 @@
 package cafe.adriel.gwentwallpapers.data.internal.repository
 
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
-import cafe.adriel.gwentwallpapers.domain.model.card.CardSide
+import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.FRONT
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.satchel.SatchelStorage
 import cafe.adriel.satchel.ktx.getOrDefault
 import io.mockk.every
@@ -109,6 +109,6 @@ class FavoriteRepositoryTest {
         name = null,
         artist = null,
         color = "#000000",
-        side = CardSide.FRONT
+        side = FRONT
     )
 }

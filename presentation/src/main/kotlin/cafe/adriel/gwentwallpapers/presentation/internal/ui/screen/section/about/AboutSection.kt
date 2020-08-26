@@ -37,31 +37,31 @@ internal class AboutSection(private val binding: SectionAboutBinding) : KoinComp
         itemAdapter {
             authorInfo(getSettings().theme.authorBorderDrawableId)
 
-            text(R.string.about_intro_message_1)
+            text(binding.activity.getString(R.string.about_intro_message_1))
 
-            text(R.string.about_intro_message_2)
+            text(binding.activity.getString(R.string.about_intro_message_2))
 
             selection(GameInviteLink.values()) { binding.activity.openUrl(it.url, logger) }
 
-            text(R.string.about_intro_message_3)
+            text(binding.activity.getString(R.string.about_intro_message_3))
 
             selection(ContactLink.values(), onSelected = ::openLink)
 
             section(R.string.about_open_source)
 
-            text(R.string.about_open_source_message)
+            text(binding.activity.getString(R.string.about_open_source_message))
 
             selection(OpenSourceLink.values()) { binding.activity.openUrl(it.url, logger) }
 
             section(R.string.about_legal)
 
-            text(R.string.about_legal_message_1)
+            text(binding.activity.getString(R.string.about_legal_message_1))
 
-            text(R.string.about_legal_message_2)
+            text(binding.activity.getString(R.string.about_legal_message_2))
 
             selection(LegalLink.values()) { binding.activity.openUrl(it.url, logger) }
 
-            quote(R.string.about_legal_copyright)
+            quote(binding.activity.getString(R.string.about_legal_copyright))
         }
     }
 

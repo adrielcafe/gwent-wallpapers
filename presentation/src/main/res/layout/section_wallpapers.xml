@@ -43,14 +43,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginBottom="?actionBarSize"
-        android:padding="8dp"
+        android:padding="12dp"
         android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:descendantFocusability="blocksDescendants"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/wallpaperTitle"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             tools:text="@tools:sample/full_names"
             style="@style/CurrentWallpaperInfo"/>
 
@@ -58,6 +61,13 @@
             android:id="@+id/wallpaperArtist"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             tools:text="@tools:sample/full_names"
+            style="@style/CurrentWallpaperInfo"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/wallpaperShowMore"
+            android:layout_marginTop="4dp"
+            android:text="@string/wallpaper_info_more"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
             style="@style/CurrentWallpaperInfo"/>
 
     </LinearLayout>

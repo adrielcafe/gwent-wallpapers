@@ -1,6 +1,6 @@
 package cafe.adriel.gwentwallpapers.domain.interactor
 
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 
 private typealias WallpaperId = Int
 

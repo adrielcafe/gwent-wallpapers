@@ -5,10 +5,10 @@ import cafe.adriel.broker.BrokerSubscriber
 import cafe.adriel.broker.lifecycle.subscribe
 import cafe.adriel.gwentwallpapers.domain.interactor.IsFavoriteInteractor
 import cafe.adriel.gwentwallpapers.domain.model.AppInfo
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchFilter
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchSorter
 import cafe.adriel.gwentwallpapers.domain.model.settings.AutoWallpaperScreen
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.R
 import cafe.adriel.gwentwallpapers.presentation.databinding.ScreenHomeBinding
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.activity

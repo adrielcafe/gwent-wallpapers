@@ -7,6 +7,6 @@ object Config {
     const val TARGET_SDK_VERSION = 30
     const val MIN_SDK_VERSION = 21
 
-    const val VERSION_CODE = 8
-    const val VERSION_NAME = "1.0.0"
+    const val VERSION_CODE = 9
+    const val VERSION_NAME = "1.0.1"
 }

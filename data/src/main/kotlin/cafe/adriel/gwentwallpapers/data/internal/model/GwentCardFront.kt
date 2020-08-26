@@ -17,6 +17,8 @@ internal data class GwentCardFront(
     val rarity: CardRarity,
     val color: CardColor,
     val primaryColor: String,
+    val flavor: String? = null,
+    val info: String? = null,
     val artist: String? = null
 ) : Serializable {
 

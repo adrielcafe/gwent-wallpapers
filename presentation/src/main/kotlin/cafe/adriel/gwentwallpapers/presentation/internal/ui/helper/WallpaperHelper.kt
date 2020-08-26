@@ -11,8 +11,8 @@ import android.os.Build.VERSION_CODES
 import android.provider.MediaStore
 import androidx.viewbinding.ViewBinding
 import cafe.adriel.gwentwallpapers.domain.model.AppInfo
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.settings.AutoWallpaperScreen
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.R
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.SCREEN_HEIGHT
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.SCREEN_WIDTH

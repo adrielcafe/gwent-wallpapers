@@ -74,7 +74,7 @@ internal class SettingsSection(private val binding: SectionSettingsBinding) : Ko
             )
 
             text(
-                titleRes = R.string.settings_screen,
+                title = binding.activity.getString(R.string.settings_screen),
                 enabled = { currentSettings.autoWallpaper.enabled }
             )
 
@@ -86,7 +86,7 @@ internal class SettingsSection(private val binding: SectionSettingsBinding) : Ko
             )
 
             text(
-                titleRes = R.string.settings_frequency,
+                title = binding.activity.getString(R.string.settings_frequency),
                 enabled = { currentSettings.autoWallpaper.enabled }
             )
 

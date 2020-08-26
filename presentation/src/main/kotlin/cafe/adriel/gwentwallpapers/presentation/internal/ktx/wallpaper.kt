@@ -2,8 +2,8 @@ package cafe.adriel.gwentwallpapers.presentation.internal.ktx
 
 import android.graphics.Bitmap
 import android.graphics.Rect
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 
 private const val IMAGE_BASE_URL = "https://cdn.jsdelivr.net/gh/adrielcafe/gwent-cards@7.1/cards"
 

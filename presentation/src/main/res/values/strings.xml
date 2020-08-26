@@ -17,7 +17,9 @@
     <string name="state_loading">Searching for wallpapers…</string>
     <string name="state_empty">Nothing found</string>
 
-    <string name="wallpaper_author">by %s</string>
+    <string name="wallpaper_info_title">%s &#x1f862;</string>
+    <string name="wallpaper_info_author">by %s</string>
+    <string name="wallpaper_info_more">More info</string>
 
     <string name="dialog_sort_title">Sort by</string>
     <string name="dialog_sort_random">Random</string>

@@ -12,16 +12,16 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 internal class SetWallpaperLocationDialog(
     private val context: Context,
     private val onSelected: (AutoWallpaperScreen) -> Unit
-) {
+) : Dialog {
 
-    private val binding by lazy { DialogSetWallpaperLocationBinding.inflate(context.inflater) }
-
-    private val dialog by lazy {
+    override val dialog by lazy {
         BottomSheetDialog(context).apply {
             setContentView(binding.root)
             setup()
         }
     }
+
+    private val binding by lazy { DialogSetWallpaperLocationBinding.inflate(context.inflater) }
 
     private fun setup() {
         binding.options.setNavigationItemSelectedListener { menuItem ->
@@ -37,13 +37,11 @@ internal class SetWallpaperLocationDialog(
         }
     }
 
-    fun show() {
+    override fun show() {
         if (VERSION.SDK_INT < VERSION_CODES.N) {
             onSelected(AutoWallpaperScreen.BOTH)
         } else {
-            dialog.show()
+            super.show()
         }
     }
-
-    fun dismiss() = dialog.dismiss()
 }

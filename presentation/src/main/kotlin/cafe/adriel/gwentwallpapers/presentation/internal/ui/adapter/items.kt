@@ -6,17 +6,19 @@ import androidx.core.graphics.toColorInt
 import androidx.core.view.forEach
 import androidx.core.view.isEmpty
 import androidx.core.view.isVisible
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.R
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterAuthorInfoBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterCheckboxBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterQuoteBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterSectionBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterSelectionBinding
+import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterTagBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterTextBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterWallpaperBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.ItemSelectionBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.ItemSingleSelectionBinding
+import cafe.adriel.gwentwallpapers.presentation.databinding.ItemTagBinding
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.ModelBindingItem
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.activity
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.addOption
@@ -81,21 +83,21 @@ internal fun AdapterItem.section(
     }
 
 internal fun AdapterItem.text(
-    @StringRes titleRes: Int,
+    title: String,
     enabled: () -> Boolean = { true }
 ) =
     item(R.layout.adapter_text, AdapterTextBinding::inflate) {
         root.apply {
-            text = context.getString(titleRes)
+            text = title
             isEnabled = enabled()
         }
     }
 
 internal fun AdapterItem.quote(
-    @StringRes textRes: Int
+    text: String,
 ) =
     item(R.layout.adapter_quote, AdapterQuoteBinding::inflate) {
-        title.text = activity.getString(textRes)
+        title.text = text
     }
 
 internal fun AdapterItem.checkBox(
@@ -115,6 +117,19 @@ internal fun AdapterItem.checkBox(
             isEnabled = enabled()
             isChecked = selected()
             setOnCheckedChangeListener { _, isChecked -> onChange(isChecked) }
+        }
+    }
+
+internal fun AdapterItem.tags(
+    values: List<String>
+) =
+    item(R.layout.adapter_tag, AdapterTagBinding::inflate) {
+        values.forEach { value ->
+            ItemTagBinding
+                .inflate(activity.inflater)
+                .root
+                .apply { text = value }
+                .let(root::addView)
         }
     }
 

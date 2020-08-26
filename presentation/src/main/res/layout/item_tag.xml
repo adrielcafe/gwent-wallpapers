@@ -10,5 +10,6 @@
     app:chipStrokeWidth="1dp"
     app:chipStrokeColor="?colorPrimary"
     app:chipBackgroundColor="@android:color/transparent"
+    app:rippleColor="@android:color/transparent"
     tools:text="@tools:sample/lorem"
-    style="@style/Widget.MaterialComponents.Chip.Action" />
+    style="@style/Widget.MaterialComponents.Chip.Action"/>

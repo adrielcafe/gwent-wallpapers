@@ -1,4 +1,4 @@
-package cafe.adriel.gwentwallpapers.domain.model
+package cafe.adriel.gwentwallpapers.domain.model.wallpaper
 
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide
 

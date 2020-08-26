@@ -2,7 +2,6 @@ package cafe.adriel.gwentwallpapers.data.internal.mapper
 
 import cafe.adriel.gwentwallpapers.data.internal.model.GwentCardBack
 import cafe.adriel.gwentwallpapers.data.internal.model.GwentCardFront
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.card.CardColor.GOLD
 import cafe.adriel.gwentwallpapers.domain.model.card.CardFaction.NEUTRAL
 import cafe.adriel.gwentwallpapers.domain.model.card.CardRarity.EPIC
@@ -10,6 +9,7 @@ import cafe.adriel.gwentwallpapers.domain.model.card.CardSet.BASE
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.BACK
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.FRONT
 import cafe.adriel.gwentwallpapers.domain.model.card.CardType.UNIT
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 import strikt.assertions.isEqualTo

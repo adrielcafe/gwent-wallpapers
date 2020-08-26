@@ -85,7 +85,7 @@
         <item name="fontFamily">monospace</item>
     </style>
 
-    <style name="ChipSelectionText">
+    <style name="ChipTagText">
         <item name="android:textSize">12sp</item>
         <item name="fontFamily">@font/ubuntu</item>
     </style>

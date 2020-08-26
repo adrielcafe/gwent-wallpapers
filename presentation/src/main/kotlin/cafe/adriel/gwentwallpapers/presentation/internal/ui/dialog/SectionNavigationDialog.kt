@@ -10,19 +10,19 @@ internal class SectionNavigationDialog(
     private val context: Context,
     private val currentSection: ScreenSection,
     private val onSelected: (ScreenSection) -> Unit
-) {
+) : Dialog {
 
-    private val menuBinding by lazy { DialogSectionNavigationMenuBinding.inflate(context.inflater) }
-
-    private val dialog by lazy {
+    override val dialog by lazy {
         BottomSheetDialog(context).apply {
-            setContentView(menuBinding.root)
+            setContentView(binding.root)
             setup()
         }
     }
 
+    private val binding by lazy { DialogSectionNavigationMenuBinding.inflate(context.inflater) }
+
     private fun setup() {
-        menuBinding.options.apply {
+        binding.options.apply {
             setCheckedItem(currentSection.itemId)
             setNavigationItemSelectedListener { menuItem ->
                 val selectedSection = ScreenSection.values().first { it.itemId == menuItem.itemId }
@@ -34,8 +34,4 @@ internal class SectionNavigationDialog(
             }
         }
     }
-
-    fun show() = dialog.show()
-
-    fun dismiss() = dialog.dismiss()
 }

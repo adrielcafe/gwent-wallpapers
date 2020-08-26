@@ -2,8 +2,10 @@ package cafe.adriel.gwentwallpapers.data.internal.mapper
 
 import cafe.adriel.gwentwallpapers.data.internal.model.GwentCardBack
 import cafe.adriel.gwentwallpapers.data.internal.model.GwentCardFront
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
-import cafe.adriel.gwentwallpapers.domain.model.card.CardSide
+import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.BACK
+import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.FRONT
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.WallpaperInfo
 
 internal fun GwentCardFront.toWallpaper(): Wallpaper =
     Wallpaper(
@@ -11,7 +13,7 @@ internal fun GwentCardFront.toWallpaper(): Wallpaper =
         name = name,
         artist = artist,
         color = primaryColor,
-        side = CardSide.FRONT
+        side = FRONT
     )
 
 internal fun GwentCardBack.toWallpaper(): Wallpaper =
@@ -20,5 +22,20 @@ internal fun GwentCardBack.toWallpaper(): Wallpaper =
         name = null,
         artist = null,
         color = primaryColor,
-        side = CardSide.BACK
+        side = BACK
+    )
+
+internal fun GwentCardFront.toWallpaperInfo(): WallpaperInfo =
+    WallpaperInfo(
+        name = name,
+        flavor = flavor?.trim(),
+        info = info?.trim(),
+        artist = artist,
+        tags = listOf(
+            color.title,
+            rarity.title,
+            type.title,
+            faction.title,
+            set.title
+        )
     )

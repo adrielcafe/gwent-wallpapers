@@ -5,8 +5,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import cafe.adriel.broker.BrokerSubscriber
 import cafe.adriel.broker.lifecycle.subscribe
 import cafe.adriel.broker.removeRetained
+import cafe.adriel.gwentwallpapers.domain.interactor.GetWallpaperInfoInteractor
 import cafe.adriel.gwentwallpapers.domain.interactor.IsFavoriteInteractor
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
+import cafe.adriel.gwentwallpapers.domain.model.card.CardSide
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.R
 import cafe.adriel.gwentwallpapers.presentation.databinding.AdapterWallpaperBinding
 import cafe.adriel.gwentwallpapers.presentation.databinding.SectionWallpapersBinding
@@ -22,6 +24,7 @@ import cafe.adriel.gwentwallpapers.presentation.internal.model.WallpaperEvent
 import cafe.adriel.gwentwallpapers.presentation.internal.model.WallpaperEvent.WallpaperExpander
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.adapter.WallpaperModelAdapter
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.adapter.wallpaper
+import cafe.adriel.gwentwallpapers.presentation.internal.ui.dialog.WallpaperInfoDialog
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.helper.ConnectivityHelper
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.helper.ImageLoaderHelper
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.helper.WallpaperExpanderHelper
@@ -31,6 +34,7 @@ import cafe.adriel.gwentwallpapers.shared.di.InjectionQualifier.Interactor
 import cafe.adriel.hal.emit
 import cafe.adriel.hal.observeState
 import com.mikepenz.fastadapter.dsl.modelAdapter
+import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.scope.viewModel
 import org.koin.core.KoinComponent
 import org.koin.core.inject
@@ -46,6 +50,7 @@ internal class WallpapersSection(private val binding: SectionWallpapersBinding) 
     private val viewModel by binding.koinScope.viewModel<WallpapersViewModel>(binding.activity)
     private val eventSubscriber by binding.koinScope.inject<BrokerSubscriber>()
     private val isFavorite by inject<IsFavoriteInteractor>(named<Interactor.IsFavorite>())
+    private val getWallpaperInfo by inject<GetWallpaperInfoInteractor>(named<Interactor.GetWallpaperInfo>())
     private val connectivityHelper by binding.koinScope.inject<ConnectivityHelper>()
     private val wallpaperExpanderHelper by binding.koinScope.inject<WallpaperExpanderHelper>()
     private val imageLoaderHelper by binding.koinScope.inject<ImageLoaderHelper> {
@@ -81,6 +86,10 @@ internal class WallpapersSection(private val binding: SectionWallpapersBinding) 
             adapter = wallpaperAdapter
             disableChangeAnimations()
             addOnScrollListener(imageLoaderHelper.preloaderListener)
+        }
+
+        binding.wallpaperInfo.setOnClickListener {
+            showWallpaperInfoDialog()
         }
     }
 
@@ -139,9 +148,11 @@ internal class WallpapersSection(private val binding: SectionWallpapersBinding) 
         }
 
         binding.wallpaperArtist.apply {
-            text = context.getString(R.string.wallpaper_author, wallpaper.artist)
+            text = context.getString(R.string.wallpaper_info_author, wallpaper.artist)
             isVisible = wallpaper.artist.isNullOrBlank().not()
         }
+
+        binding.wallpaperShowMore.isVisible = wallpaper.side == CardSide.FRONT
     }
 
     private fun onWallpaperShrinked() {
@@ -156,4 +167,16 @@ internal class WallpapersSection(private val binding: SectionWallpapersBinding) 
             )
             wallpaperExpanderHelper.expand(imageRequest, wallpaper, binding, itemBinding)
         }
+
+    private fun showWallpaperInfoDialog() {
+        val status = wallpaperExpanderHelper.currentStatus
+        if (status is WallpaperExpander.Expanded && status.wallpaper.side == CardSide.FRONT) {
+            binding.coroutineScope.launch {
+                WallpaperInfoDialog(
+                    context = binding.activity,
+                    wallpaperInfo = getWallpaperInfo(status.wallpaper)
+                ).show()
+            }
+        }
+    }
 }

@@ -26,11 +26,9 @@ internal class SearchFilterDialog(
     private val context: Context,
     private val currentFilter: SearchFilter,
     private val onSelected: (SearchFilter) -> Unit
-) {
+) : Dialog {
 
-    private val binding by lazy { DialogSearchFilterBinding.inflate(context.inflater) }
-
-    private val dialog by lazy {
+    override val dialog by lazy {
         BottomSheetDialog(context).apply {
             setContentView(binding.root)
             setupBottomSheet()
@@ -40,9 +38,11 @@ internal class SearchFilterDialog(
         }
     }
 
+    private val binding by lazy { DialogSearchFilterBinding.inflate(context.inflater) }
+
     private val filterAdapter by adapter(binding.coroutineScope) {
         itemAdapter {
-            text(R.string.dialog_filter_favorite)
+            text(context.getString(R.string.dialog_filter_favorite))
 
             selection(
                 values = CardFavorite.values(),
@@ -50,7 +50,7 @@ internal class SearchFilterDialog(
                 onSelected = { selectedFilter = selectedFilter.copy(favorite = it) }
             )
 
-            text(R.string.dialog_filter_side)
+            text(context.getString(R.string.dialog_filter_side))
 
             selection(
                 values = CardSide.values(),
@@ -62,7 +62,7 @@ internal class SearchFilterDialog(
             )
 
             text(
-                titleRes = R.string.dialog_filter_color,
+                title = context.getString(R.string.dialog_filter_color),
                 enabled = { cardFrontFilterEnabled }
             )
 
@@ -74,7 +74,7 @@ internal class SearchFilterDialog(
             )
 
             text(
-                titleRes = R.string.dialog_filter_rarity,
+                title = context.getString(R.string.dialog_filter_rarity),
                 enabled = { cardFrontFilterEnabled }
             )
 
@@ -86,7 +86,7 @@ internal class SearchFilterDialog(
             )
 
             text(
-                titleRes = R.string.dialog_filter_type,
+                title = context.getString(R.string.dialog_filter_type),
                 enabled = { cardFrontFilterEnabled }
             )
 
@@ -98,7 +98,7 @@ internal class SearchFilterDialog(
             )
 
             text(
-                titleRes = R.string.dialog_filter_faction,
+                title = context.getString(R.string.dialog_filter_faction),
                 enabled = { cardFrontFilterEnabled }
             )
 
@@ -110,7 +110,7 @@ internal class SearchFilterDialog(
             )
 
             text(
-                titleRes = R.string.dialog_filter_set,
+                title = context.getString(R.string.dialog_filter_set),
                 enabled = { cardFrontFilterEnabled }
             )
 
@@ -140,7 +140,7 @@ internal class SearchFilterDialog(
 
     private fun setupButtons() {
         binding.apply {
-            closeFilter.setOnClickListener {
+            close.setOnClickListener {
                 dismiss()
             }
             clearFilter.setOnClickListener {
@@ -199,8 +199,4 @@ internal class SearchFilterDialog(
             onSelected(this)
         }
     }
-
-    fun show() = dialog.show()
-
-    fun dismiss() = dialog.dismiss()
 }

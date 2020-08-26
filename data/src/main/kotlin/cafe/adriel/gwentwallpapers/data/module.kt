@@ -61,6 +61,10 @@ val dataModule = module {
         get<WallpaperRepository>().getRandomWallpaper
     }
 
+    single(named<Interactor.GetWallpaperInfo>()) {
+        get<WallpaperRepository>().getWallpaperInfo
+    }
+
     single(named<Interactor.SearchWallpapers>()) {
         get<WallpaperRepository>().searchWallpapers
     }

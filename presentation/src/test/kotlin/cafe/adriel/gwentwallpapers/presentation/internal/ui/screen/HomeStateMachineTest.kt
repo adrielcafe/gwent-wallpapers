@@ -2,11 +2,11 @@ package cafe.adriel.gwentwallpapers.presentation.internal.ui.screen
 
 import cafe.adriel.broker.BrokerPublisher
 import cafe.adriel.gwentwallpapers.domain.interactor.ToggleFavoriteInteractor
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.FRONT
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchFilter
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchSorter
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.internal.model.ScreenSection
 import cafe.adriel.gwentwallpapers.presentation.internal.model.WallpaperEvent
 import cafe.adriel.gwentwallpapers.presentation.internal.model.WallpaperEvent.FavoriteChanged

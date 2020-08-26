@@ -1,7 +1,7 @@
 package cafe.adriel.gwentwallpapers.data.internal.ktx
 
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchSorter
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.shared.ktx.normalized
 
 internal fun Sequence<Wallpaper>.sortWallpapers(sorter: SearchSorter): Sequence<Wallpaper> =

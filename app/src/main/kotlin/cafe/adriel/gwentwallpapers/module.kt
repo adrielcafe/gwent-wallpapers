@@ -10,7 +10,7 @@ private const val PLAY_STORE_URL = "https://play.google.com/store/apps/details?i
 
 private const val PROVIDER_AUTHORITY = "${BuildConfig.APPLICATION_ID}.provider"
 
-private const val STORAGE_CARDS = "cards-7.1.db"
+private const val STORAGE_CARDS = "cards-v1.db"
 private const val STORAGE_FAVORITES = "favorites.db"
 private const val STORAGE_SETTINGS = "settings.db"
 

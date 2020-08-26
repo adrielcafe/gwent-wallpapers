@@ -4,15 +4,17 @@ import cafe.adriel.gwentwallpapers.data.internal.ktx.filterCardBacks
 import cafe.adriel.gwentwallpapers.data.internal.ktx.filterCardFronts
 import cafe.adriel.gwentwallpapers.data.internal.ktx.sortWallpapers
 import cafe.adriel.gwentwallpapers.data.internal.mapper.toWallpaper
+import cafe.adriel.gwentwallpapers.data.internal.mapper.toWallpaperInfo
 import cafe.adriel.gwentwallpapers.data.internal.model.GwentCardBack
 import cafe.adriel.gwentwallpapers.data.internal.model.GwentCardFront
 import cafe.adriel.gwentwallpapers.domain.interactor.GetFavoritesInteractor
 import cafe.adriel.gwentwallpapers.domain.interactor.GetRandomWallpaperInteractor
+import cafe.adriel.gwentwallpapers.domain.interactor.GetWallpaperInfoInteractor
 import cafe.adriel.gwentwallpapers.domain.interactor.SearchWallpapersInteractor
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.card.CardFavorite
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchFilter
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchSorter
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.satchel.SatchelStorage
 import cafe.adriel.satchel.ktx.value
 import java.util.IdentityHashMap
@@ -35,6 +37,12 @@ internal class WallpaperRepository(
             },
             SearchSorter.Random
         ).randomOrNull()
+    }
+
+    val getWallpaperInfo: GetWallpaperInfoInteractor = { wallpaper ->
+        cardFronts
+            .first { it.artId == wallpaper.id }
+            .toWallpaperInfo()
     }
 
     val searchWallpapers: SearchWallpapersInteractor = { filter, sorter ->

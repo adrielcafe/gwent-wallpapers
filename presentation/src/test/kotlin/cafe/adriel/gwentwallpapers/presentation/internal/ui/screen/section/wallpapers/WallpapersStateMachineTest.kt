@@ -3,10 +3,10 @@ package cafe.adriel.gwentwallpapers.presentation.internal.ui.screen.section.wall
 import cafe.adriel.broker.BrokerPublisher
 import cafe.adriel.gwentwallpapers.domain.interactor.SearchWallpapersInteractor
 import cafe.adriel.gwentwallpapers.domain.interactor.ToggleFavoriteInteractor
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.card.CardSide.FRONT
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchFilter
 import cafe.adriel.gwentwallpapers.domain.model.search.SearchSorter
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.internal.model.WallpaperEvent
 import cafe.adriel.hal.HAL.StateMachine
 import cafe.adriel.hal.currentState

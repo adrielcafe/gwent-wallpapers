@@ -10,8 +10,8 @@ import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import cafe.adriel.gwentwallpapers.domain.interactor.GetRandomWallpaperInteractor
 import cafe.adriel.gwentwallpapers.domain.interactor.GetSettingsInteractor
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
 import cafe.adriel.gwentwallpapers.domain.model.settings.AutoWallpaperFrequency
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.R
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.helper.NotificationHelper
 import cafe.adriel.gwentwallpapers.presentation.internal.ui.helper.WallpaperHelper
@@ -58,7 +58,7 @@ internal class AutoWallpaperWorker(
     private val Wallpaper.notificationMessage: String?
         get() {
             val cardName = name?.quoted().orEmpty()
-            val artistName = artist?.let { context.getString(R.string.wallpaper_author, it) }.orEmpty()
+            val artistName = artist?.let { context.getString(R.string.wallpaper_info_author, it) }.orEmpty()
             return "$cardName $artistName".ifBlank { null }
         }
 

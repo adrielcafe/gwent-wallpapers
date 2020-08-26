@@ -1,7 +1,7 @@
 package cafe.adriel.gwentwallpapers.presentation.internal.ui.helper
 
 import android.graphics.drawable.Drawable
-import cafe.adriel.gwentwallpapers.domain.model.Wallpaper
+import cafe.adriel.gwentwallpapers.domain.model.wallpaper.Wallpaper
 import cafe.adriel.gwentwallpapers.presentation.R
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.originalImageUrl
 import cafe.adriel.gwentwallpapers.presentation.internal.ktx.thumbnailImageUrl

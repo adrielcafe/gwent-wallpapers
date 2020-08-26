@@ -17,6 +17,7 @@ sealed class InjectionQualifier {
     sealed class Interactor {
         // Wallpapers
         object GetRandomWallpaper : Interactor()
+        object GetWallpaperInfo : Interactor()
         object SearchWallpapers : Interactor()
 
         // Favorites
