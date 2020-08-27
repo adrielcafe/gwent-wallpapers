@@ -61,7 +61,7 @@ internal class WallpaperHelper(
                     val bitmap = imageLoader.getBitmap(wallpaper.originalImageUrl)
                     val cropHint = bitmap.cropHint(wallpaperManager.desiredMinimumHeight)
 
-                    logger.d("Screen size -> ${SCREEN_WIDTH}x${SCREEN_HEIGHT}")
+                    logger.d("Screen size -> ${SCREEN_WIDTH}x$SCREEN_HEIGHT")
                     logger.d("Bitmap size -> ${bitmap.width}x${bitmap.height}")
                     logger.d("Desired wallpaper height -> ${wallpaperManager.desiredMinimumHeight}")
 
