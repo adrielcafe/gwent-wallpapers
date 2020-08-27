@@ -105,7 +105,7 @@ val presentationModule = module {
             clipboardManager = get(),
             imageLoader = get(),
             appInfo = get(),
-            dispatcher = get(named<Dispatcher.Worker>()),
+            dispatcher = get(named<Dispatcher.Helper>()),
             logger = get()
         )
     }

@@ -1,6 +1,7 @@
 package cafe.adriel.gwentwallpapers.shared
 
 import cafe.adriel.gwentwallpapers.shared.di.InjectionQualifier.Dispatcher
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -12,11 +13,11 @@ val sharedModule = module {
         Dispatchers.IO
     }
 
-    single(named<Dispatcher.Worker>()) {
-        Dispatchers.IO
+    single(named<Dispatcher.Helper>()) {
+        Dispatchers.Default
     }
 
-    single(named<Dispatcher.Helper>()) {
-        Dispatchers.IO
+    single<CoroutineDispatcher>(named<Dispatcher.Worker>()) {
+        Dispatchers.Main
     }
 }

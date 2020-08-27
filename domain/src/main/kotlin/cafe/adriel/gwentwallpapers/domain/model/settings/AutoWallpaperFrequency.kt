@@ -8,6 +8,7 @@ enum class AutoWallpaperFrequency(
     val interval: Long,
     val timeUnit: TimeUnit
 ) : AdapterOption<AutoWallpaperFrequency> {
+    EVERY_HALF_HOUR("Half hour", 30L, TimeUnit.MINUTES),
     EVERY_HOUR("Hour", 1L, TimeUnit.HOURS),
     EVERY_TWELVE_HOURS("Twelve hours", 12L, TimeUnit.HOURS),
     EVERY_DAY("Day", 1L, TimeUnit.DAYS),
